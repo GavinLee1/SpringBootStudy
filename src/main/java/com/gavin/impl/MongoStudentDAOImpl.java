@@ -4,9 +4,14 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
 import com.gavin.dao.StudentDAO;
 import com.gavin.entity.Student;
 
+@Repository
+@Qualifier("fakeData")
 public class MongoStudentDAOImpl implements StudentDAO{
 private static Map<Integer, Student> students;
 	
